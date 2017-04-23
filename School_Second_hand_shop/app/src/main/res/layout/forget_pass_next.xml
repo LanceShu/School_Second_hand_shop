@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/forget_layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/register_background"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/forgetPassNext_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/back"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新设置密码"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="15dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#FFF"
+        android:layout_below="@id/forget_layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="35dp"
+        >
+
+        <RelativeLayout
+            android:layout_below="@id/register_layout_phonenumber_layout"
+            android:id="@+id/register_layout_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/register_input_all_corner"
+            android:layout_marginTop="25dp"
+            >
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/lock"
+                android:layout_centerVertical="true"
+                android:id="@+id/register_layout_password_image"
+                />
+            <EditText
+                android:id="@+id/forgetPassNext_newPass"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/register_layout_password_image"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:hint="请输入新密码"
+                android:layout_centerVertical="true"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                android:background="@null"
+                android:inputType="textPassword"
+                />
+
+            <ImageView
+                android:id="@+id/forgetPass_newPassEye"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@mipmap/eye_cant_see"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/register_layout_password_layout"
+            android:id="@+id/register_layout_password_agin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/register_input_all_corner"
+            android:layout_marginTop="25dp"
+            >
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/lock"
+                android:layout_centerVertical="true"
+                android:id="@+id/register_layout_password_agin_image"
+                />
+
+            <ImageView
+                android:id="@+id/forgetPass_newPassAgainEye"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@mipmap/eye_cant_see"/>
+
+            <EditText
+                android:id="@+id/forgetPassNext_newPassAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:hint="请再次输入新密码"
+                android:textColorHint="#fff"
+                android:textSize="15sp"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:layout_alignTop="@+id/forgetPass_newPassAgainEye"
+                android:layout_toEndOf="@+id/register_layout_password_agin_image" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/forgetPassNext_complete"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="去登陆"
+            android:layout_below="@id/register_layout_password_agin_layout"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/register_layout_register_button_background"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
