@@ -1,5 +1,6 @@
 package com.our_company.school_second_hand_shop.Fragment;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -9,6 +10,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -18,13 +21,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.our_company.school_second_hand_shop.Activity.GoodsFilter;
 import com.our_company.school_second_hand_shop.Activity.GoodsFind;
+import com.our_company.school_second_hand_shop.Activity.IssueGoods;
 import com.our_company.school_second_hand_shop.Activity.MainMenu_Activity;
 import com.our_company.school_second_hand_shop.Content;
 import com.our_company.school_second_hand_shop.DataClass.GoodsInfoDescrib;
@@ -47,6 +53,11 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
     private List<GoodsInfoDescrib> goodsInfoDescribList = new ArrayList<>();
     private EditText find;
 
+    private FloatingActionButton fab;
+    private TextView cdl;
+    private LinearLayout fab2_layout;
+    private boolean fabOpened ;
+
     private RelativeLayout hobby;
     private RelativeLayout computer;
     private RelativeLayout book;
@@ -63,6 +74,7 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        fabOpened = false;
     }
 
     private void setGoodsInfo() {
@@ -122,7 +134,22 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
         phone = (RelativeLayout) rootView.findViewById(R.id.main_phones);
         cosmeticss = (RelativeLayout) rootView.findViewById(R.id.main_cosmeticss);
         others = (RelativeLayout) rootView.findViewById(R.id.main_others);
+        fab = (FloatingActionButton) rootView.findViewById(R.id.fab1);
+        cdl = (TextView) rootView.findViewById(R.id.cdl);
+        fab2_layout = (LinearLayout) rootView.findViewById(R.id.fab2_layout);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!fabOpened){
+                    openMenu(v);
+                }else{
+                    closeMune(v);
+                }
+            }
+        });
 
+        fab2_layout.setOnClickListener(this);
+//        cdl.setOnClickListener(this);
         hobby.setOnClickListener(this);
         computer.setOnClickListener(this);
         book.setOnClickListener(this);
@@ -133,6 +160,37 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
         phone.setOnClickListener(this);
         cosmeticss.setOnClickListener(this);
         others.setOnClickListener(this);
+    }
+
+    private void closeMune(View v) {
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0.8f,0);
+        alphaAnimation.setDuration(500);
+        cdl.startAnimation(alphaAnimation);
+        AlphaAnimation alphaAnimation1 = new AlphaAnimation(1.0f,0);
+        alphaAnimation1.setDuration(500);
+        fab2_layout.startAnimation(alphaAnimation1);
+        cdl.setVisibility(View.GONE);
+        fab2_layout.setVisibility(View.GONE);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(v,"rotation",-135,20,0);
+        animator.setDuration(500);
+        animator.start();
+        fabOpened = false;
+    }
+
+    private void openMenu(View v) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(v,"rotation",0,-155,-135);
+        objectAnimator.setDuration(500);
+        objectAnimator.start();
+        cdl.setVisibility(View.VISIBLE);
+        fab2_layout.setVisibility(View.VISIBLE);
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0,0.8f);
+        alphaAnimation.setDuration(500);
+        alphaAnimation.setFillAfter(true);
+        cdl.startAnimation(alphaAnimation);
+        AlphaAnimation alphaAnimation1 = new AlphaAnimation(0,1.0f);
+        alphaAnimation1.setDuration(500);
+        fab2_layout.startAnimation(alphaAnimation1);
+        fabOpened = true;
     }
 
     @Override
@@ -193,6 +251,15 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
             case R.id.main_others:
                 intentClassify.putExtra("classify","others");
                 startActivity(intentClassify,ActivityOptions.makeSceneTransitionAnimation((Activity)getContext()).toBundle());
+                break;
+//            case R.id.cdl:
+//                    closeMune(fab);
+//                break;
+            case R.id.fab2_layout:
+
+                Intent intent1 = new Intent(getContext(), IssueGoods.class);
+                startActivity(intent1,ActivityOptions.makeSceneTransitionAnimation((Activity) getContext()).toBundle());
+                closeMune(fab);
                 break;
         }
     }

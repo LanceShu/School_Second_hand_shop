@@ -4,11 +4,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <android.support.design.widget.CoordinatorLayout
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="false">
+
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/main_appbar"
@@ -324,15 +326,12 @@
 
         </android.support.v7.widget.RecyclerView>
 
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab1"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="15dp"
-            android:src="@drawable/jia"
-            app:backgroundTint="@color/register_background"/>
+        <TextView
+            android:id="@+id/cdl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#ffff"/>
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -385,7 +384,47 @@
 
         </RelativeLayout>
 
+    </LinearLayout>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/jia"
+        app:backgroundTint="@color/register_background"
+        app:rippleColor="#33728dff"/>
+
+    <LinearLayout
+        android:id="@+id/fab2_layout"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/fab1"
+        android:layout_margin="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/addGoods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="发布商品"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jia"
+            app:backgroundTint="@color/colorAccent"
+            app:rippleColor="#33728dff"/>
 
     </LinearLayout>
 

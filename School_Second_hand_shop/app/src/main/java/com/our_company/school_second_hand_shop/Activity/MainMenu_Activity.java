@@ -54,7 +54,7 @@ public class MainMenu_Activity extends AppCompatActivity implements View.OnClick
         me_layout = (RelativeLayout) findViewById(R.id.main_menu_me_layout);
 
         home_layout.setOnClickListener(this);
-        home_layout.setOnClickListener(this);
+        find_layout.setOnClickListener(this);
         me_layout.setOnClickListener(this);
 
         replaceFragment(new FragmentHome());

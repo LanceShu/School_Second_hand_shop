@@ -34,6 +34,9 @@
         <activity android:name=".Activity.GoodsFilter"
             android:theme="@style/AppTheme."
             android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".Activity.IssueGoods"
+            android:theme="@style/AppTheme."
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
