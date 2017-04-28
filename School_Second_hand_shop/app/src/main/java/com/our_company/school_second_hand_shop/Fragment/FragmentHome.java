@@ -149,7 +149,7 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
         });
 
         fab2_layout.setOnClickListener(this);
-//        cdl.setOnClickListener(this);
+        cdl.setOnClickListener(this);
         hobby.setOnClickListener(this);
         computer.setOnClickListener(this);
         book.setOnClickListener(this);
@@ -163,7 +163,7 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
     }
 
     private void closeMune(View v) {
-        AlphaAnimation alphaAnimation = new AlphaAnimation(0.8f,0);
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0.9f,0);
         alphaAnimation.setDuration(500);
         cdl.startAnimation(alphaAnimation);
         AlphaAnimation alphaAnimation1 = new AlphaAnimation(1.0f,0);
@@ -183,7 +183,7 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
         objectAnimator.start();
         cdl.setVisibility(View.VISIBLE);
         fab2_layout.setVisibility(View.VISIBLE);
-        AlphaAnimation alphaAnimation = new AlphaAnimation(0,0.8f);
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0,0.9f);
         alphaAnimation.setDuration(500);
         alphaAnimation.setFillAfter(true);
         cdl.startAnimation(alphaAnimation);
@@ -252,9 +252,9 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
                 intentClassify.putExtra("classify","others");
                 startActivity(intentClassify,ActivityOptions.makeSceneTransitionAnimation((Activity)getContext()).toBundle());
                 break;
-//            case R.id.cdl:
-//                    closeMune(fab);
-//                break;
+            case R.id.cdl:
+                    closeMune(fab);
+                break;
             case R.id.fab2_layout:
 
                 Intent intent1 = new Intent(getContext(), IssueGoods.class);

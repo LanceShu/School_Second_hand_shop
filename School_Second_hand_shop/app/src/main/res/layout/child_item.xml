@@ -4,9 +4,10 @@
     android:layout_height="match_parent">
     <TextView
         android:id="@+id/child_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="16sp"
         android:text="这是子item"
+        android:gravity="center"
         android:layout_margin="5dp"/>
 </LinearLayout>

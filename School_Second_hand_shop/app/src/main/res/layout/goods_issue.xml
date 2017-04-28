@@ -7,7 +7,7 @@
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:minHeight="?attr/actionBarSize"
         android:background="@color/register_background"
         app:popupTheme="@style/ToolbarPopupTheme">
@@ -31,7 +31,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="220dp"
         android:orientation="vertical"
         android:background="@drawable/issue_content">
 
@@ -40,14 +40,15 @@
             android:layout_marginTop="1dp"
             android:padding="5dp"
             android:layout_width="match_parent"
-            android:layout_height="145dp"
+            android:layout_height="155dp"
             android:hint="商品描述..."
             android:gravity="top|left"
             android:background="@null"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -55,19 +56,23 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@mipmap/issue"/>
 
             <ImageView
                 android:id="@+id/issue_image2"
                 android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@mipmap/issue"/>
 
             <ImageView
                 android:id="@+id/issue_image3"
                 android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@mipmap/issue"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -77,30 +82,23 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ExpandableListView
                 android:id="@+id/issue_auto1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <ExpandableListView
                 android:id="@+id/issue_auto2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <ExpandableListView
-                android:id="@+id/issue_auto3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
