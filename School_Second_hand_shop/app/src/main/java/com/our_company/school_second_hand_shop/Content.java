@@ -15,6 +15,6 @@ public class Content {
     public  static int WIDTH = 0;
     public static List<GoodsInfoDescrib> list = new ArrayList<>();
     public static Context mainContext;
-    public static String issue_classify;
-    public static String issue_school;
+    public static String issue_classify = "";
+    public static String issue_school = "";
 }

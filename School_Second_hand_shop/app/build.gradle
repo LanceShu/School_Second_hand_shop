@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.2.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/glide-3.7.0.jar')
+    compile files('libs/BmobSDK_3.5.3_20161116.jar')
 }
