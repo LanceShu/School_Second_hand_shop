@@ -3,6 +3,7 @@ package com.our_company.school_second_hand_shop.Activity;
 import android.Manifest;
 import android.content.ContentUris;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;

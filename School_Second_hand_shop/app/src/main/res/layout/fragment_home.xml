@@ -44,16 +44,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:background="@drawable/devide_back"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="10dp">
+                android:padding="3dp">
 
                 <LinearLayout
                     android:id="@+id/linear1"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="match_parent"
-                    android:layout_height="57.5dp"
+                    android:layout_height="57dp"
                     android:orientation="horizontal">
 
                     <RelativeLayout
@@ -66,7 +63,7 @@
                         <ImageView
                             android:id="@+id/image1"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/guitar"/>
 
                         <TextView
@@ -76,7 +73,8 @@
                             android:gravity="center"
                             android:textSize="10sp"
                             android:textColor="#494949"
-                            android:text="兴趣爱好"/>
+                            android:text="兴趣爱好"
+                            android:layout_alignParentBottom="true" />
 
                     </RelativeLayout>
 
@@ -87,11 +85,14 @@
                         android:layout_weight="1"
                         android:gravity="center">
 
+
                         <ImageView
                             android:id="@+id/image2"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:src="@mipmap/computer"/>
+                            android:layout_height="42dp"
+                            android:src="@mipmap/computer"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
 
                         <TextView
                             android:layout_below="@id/image2"
@@ -114,7 +115,7 @@
                         <ImageView
                             android:id="@+id/image3"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/books"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentStart="true" />
@@ -141,7 +142,7 @@
                         <ImageView
                             android:id="@+id/image4"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/mouse"/>
 
                         <TextView
@@ -165,7 +166,7 @@
                         <ImageView
                             android:id="@+id/image5"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/gifts"/>
 
                         <TextView
@@ -186,7 +187,7 @@
                     android:layout_marginTop="3dp"
                     android:layout_below="@id/linear1"
                     android:layout_width="match_parent"
-                    android:layout_height="57.5dp"
+                    android:layout_height="57dp"
                     android:orientation="horizontal">
 
                     <RelativeLayout
@@ -199,7 +200,7 @@
                         <ImageView
                             android:id="@+id/image6"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/basketball"/>
 
                         <TextView
@@ -223,7 +224,7 @@
                         <ImageView
                             android:id="@+id/image7"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/clothes"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentStart="true" />
@@ -249,7 +250,7 @@
                         <ImageView
                             android:id="@+id/image8"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/myphone"/>
 
                         <TextView
@@ -273,7 +274,7 @@
                         <ImageView
                             android:id="@+id/image9"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/cosmetics"/>
 
                         <TextView
@@ -297,7 +298,7 @@
                         <ImageView
                             android:id="@+id/image0"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="42dp"
                             android:src="@mipmap/icon"/>
 
                         <TextView

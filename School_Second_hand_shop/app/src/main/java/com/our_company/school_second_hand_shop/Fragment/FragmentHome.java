@@ -10,14 +10,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +24,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.our_company.school_second_hand_shop.Activity.GoodsFilter;
 import com.our_company.school_second_hand_shop.Activity.GoodsFind;
 import com.our_company.school_second_hand_shop.Activity.IssueGoods;
-import com.our_company.school_second_hand_shop.Activity.MainMenu_Activity;
 import com.our_company.school_second_hand_shop.Content;
 import com.our_company.school_second_hand_shop.DataClass.GoodsInfoDescrib;
 import com.our_company.school_second_hand_shop.MyAdapter.GoodsAdapter;
@@ -90,7 +86,7 @@ public class FragmentHome extends Fragment implements ImageBarnnerFrameLayout.Fr
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main_menu,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_home,container,false);
         initWight(rootView);
         setGoodsInfo();
 //        Log.e("length",goodsInfoDescribList.size()+"");

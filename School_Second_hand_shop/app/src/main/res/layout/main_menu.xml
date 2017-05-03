@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/main_menu_container"
@@ -14,94 +13,15 @@
 
     </FrameLayout>
 
-    <RelativeLayout
-        android:id="@+id/main_menu_bottom"
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/main_menu_bottom">
+        android:layout_height="53dp"
+        android:paddingTop="5dp"
+        android:id="@+id/main_menu_bottom"
+        app:bnbActiveColor="#fff"
+        app:bnbBackgroundColor="@color/register_background"
+        >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
+    </com.ashokvarma.bottomnavigation.BottomNavigationBar>
 
-            <RelativeLayout
-                android:id="@+id/main_menu_home_layout"
-                android:layout_marginTop="3dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-                <ImageView
-                    android:id="@+id/main_menu_home_layout_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:src="@mipmap/home"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="首页"
-                    android:layout_below="@id/main_menu_home_layout_image"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#fff"
-                    android:textSize="13sp"
-                    />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_marginTop="3dp"
-                android:id="@+id/main_menu_discovery_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-
-                <ImageView
-                    android:id="@+id/main_menu_discovery_layout_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:src="@mipmap/glasses"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="发现"
-                    android:layout_below="@id/main_menu_discovery_layout_image"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="#fff"
-                    android:textSize="13sp"
-                    />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_marginTop="3dp"
-                android:id="@+id/main_menu_me_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                >
-
-                <ImageView
-                    android:id="@+id/main_menu_me_layout_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:src="@mipmap/me" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="我的"
-                    android:textColor="#fff"
-                    android:textSize="13sp"
-                    android:layout_below="@+id/main_menu_me_layout_image"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/textView2" />
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
 </LinearLayout>

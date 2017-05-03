@@ -13,7 +13,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
+import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.our_company.school_second_hand_shop.Content;
+import com.our_company.school_second_hand_shop.Fragment.FragmentDiscovery;
 import com.our_company.school_second_hand_shop.Fragment.FragmentHome;
 import com.our_company.school_second_hand_shop.MyView.ImageBarnnerFrameLayout;
 import com.our_company.school_second_hand_shop.R;
@@ -26,12 +29,13 @@ import static com.our_company.school_second_hand_shop.Content.*;
  * Created by Lance on 2017/3/22.
  */
 
-public class MainMenu_Activity extends AppCompatActivity implements View.OnClickListener{
+public class MainMenu_Activity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener{
 
     private FrameLayout frameLayout;
     private RelativeLayout home_layout;
     private RelativeLayout find_layout;
     private RelativeLayout me_layout;
+    private BottomNavigationBar bottomNavigationBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,30 +53,13 @@ public class MainMenu_Activity extends AppCompatActivity implements View.OnClick
 
     private void initCW() {
         frameLayout = (FrameLayout) findViewById(R.id.main_menu_container);
-        home_layout = (RelativeLayout) findViewById(R.id.main_menu_home_layout);
-        find_layout = (RelativeLayout) findViewById(R.id.main_menu_discovery_layout);
-        me_layout = (RelativeLayout) findViewById(R.id.main_menu_me_layout);
-
-        home_layout.setOnClickListener(this);
-        find_layout.setOnClickListener(this);
-        me_layout.setOnClickListener(this);
-
+        bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.main_menu_bottom);
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.home,"首页")).addItem(new BottomNavigationItem(R.mipmap.glasses,"发现"))
+                .addItem(new BottomNavigationItem(R.mipmap.me,"我")).setFirstSelectedPosition(0).setMode(BottomNavigationBar.MODE_FIXED);
+        bottomNavigationBar.initialise();
+        bottomNavigationBar.setPadding(0,5,0,0);
+        bottomNavigationBar.setTabSelectedListener(this);
         replaceFragment(new FragmentHome());
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.main_menu_home_layout:
-                replaceFragment(new FragmentHome());
-                break;
-            case R.id.main_menu_discovery_layout:
-                break;
-            case R.id.main_menu_me_layout:
-                break;
-
-        }
     }
 
     private void replaceFragment(Fragment fragment){
@@ -80,5 +67,32 @@ public class MainMenu_Activity extends AppCompatActivity implements View.OnClick
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_menu_container,fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void onTabSelected(int position) {
+
+        switch (position){
+            case 0:
+                replaceFragment(new FragmentHome());
+                break;
+            case 1:
+                replaceFragment(new FragmentDiscovery());
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onTabUnselected(int position) {
+
+    }
+
+    @Override
+    public void onTabReselected(int position) {
+
     }
 }
