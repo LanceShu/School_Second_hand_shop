@@ -15,11 +15,10 @@
 
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:paddingTop="5dp"
+        android:layout_height="50dp"
         android:id="@+id/main_menu_bottom"
-        app:bnbActiveColor="#fff"
-        app:bnbBackgroundColor="@color/register_background"
+        app:bnbActiveColor="@color/register_background"
+        app:bnbBackgroundColor="#fff"
         >
 
     </com.ashokvarma.bottomnavigation.BottomNavigationBar>

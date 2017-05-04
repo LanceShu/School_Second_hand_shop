@@ -35,6 +35,7 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.our_company.school_second_hand_shop.MyAdapter.ExpandableListViewAdapter;
 import com.our_company.school_second_hand_shop.R;
 
@@ -78,6 +79,7 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
     private int mExitTime;
     private static final String TAG = "ChangeMyDataActivity";
     private Uri userImageUri;
+    private File outputImage;
 
     private ExpandableListView elv1;
     private ExpandableListView elv2;
@@ -164,15 +166,6 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
     }
 
     private void openCamera(int i){
-        File outputImage = new File(getExternalCacheDir(),"output_image.jpg");
-        try {
-            if(outputImage.exists()){
-                outputImage.delete();
-            }
-            outputImage.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         if(Build.VERSION.SDK_INT>=24){
             imageUri = FileProvider.getUriForFile(IssueGoods.this,"com.our_company.school_second_hand_shop",outputImage);
         }else{
@@ -203,6 +196,15 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
                         if(ContextCompat.checkSelfPermission(IssueGoods.this,Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
                             ActivityCompat.requestPermissions(IssueGoods.this,new String[]{Manifest.permission.CAMERA},1);
                         }else {
+                            outputImage = new File(getExternalCacheDir(),"output_image.jpg");
+                            try {
+                                if(outputImage.exists()){
+                                    outputImage.delete();
+                                }
+                                outputImage.createNewFile();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                             openCamera(i);
                         }
                         break;
@@ -239,12 +241,15 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
         switch (requestCode){
             case TAKE_PHOTO1:
                 if(resultCode == RESULT_OK){
+                    Bitmap bitmap = null;
                     try {
-                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-                        image1.setImageBitmap(bitmap);
+                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                    bitmap.createScaledBitmap(bitmap,100,100,true);
+                    image1.setImageBitmap(bitmap);
+//                    Glide.with(this).load(imageUri).into(image1);
                 }
                 isImage1 = 1;
                 Message message1 = new Message();
@@ -267,12 +272,15 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
                 break;
             case TAKE_PHOTO2:
                 if(resultCode == RESULT_OK){
+                    Bitmap bitmap = null;
                     try {
-                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-                        image2.setImageBitmap(bitmap);
+                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                    bitmap.createScaledBitmap(bitmap,100,100,true);
+                    image2.setImageBitmap(bitmap);
+//                    Glide.with(this).load(imageUri).into(image2);
                 }
                 isImage2 = 1;
                 Message message3 = new Message();
@@ -295,12 +303,15 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
                 break;
             case TAKE_PHOTO3:
                 if(resultCode == RESULT_OK){
+                    Bitmap bitmap = null;
                     try {
-                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-                        image3.setImageBitmap(bitmap);
+                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                    bitmap.createScaledBitmap(bitmap,100,100,true);
+                    image3.setImageBitmap(bitmap);
+//                    Glide.with(this).load(imageUri).into(image3);
                 }
                 isImage3 = 1;
                 Message message5 = new Message();
@@ -334,16 +345,19 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
 
     private void displayImage(String imagePath,int i) {
         if(imagePath != null){
-            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+//            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
             if(i == 1){
                 imagePath1 = imagePath;
-                image1.setImageBitmap(bitmap);
+//                image1.setImageBitmap(bitmap);
+                Glide.with(this).load(imagePath).into(image1);
             }else if(i ==2){
                 imagePath2 = imagePath;
-                image2.setImageBitmap(bitmap);
+//                image2.setImageBitmap(bitmap);
+                Glide.with(this).load(imagePath).into(image2);
             }else if(i ==3){
                 imagePath3 = imagePath;
-                image3.setImageBitmap(bitmap);
+//                image3.setImageBitmap(bitmap);
+                Glide.with(this).load(imagePath).into(image3);
             }
         }else {
             Toast.makeText(this,"failed to get image",Toast.LENGTH_SHORT).show();
@@ -572,7 +586,5 @@ public class IssueGoods extends AppCompatActivity implements View.OnClickListene
 //        }
 //        return super.onKeyDown(keyCode, event);
 //    }
-
-
 
 }

@@ -48,7 +48,7 @@
 
                 <LinearLayout
                     android:id="@+id/linear1"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="57dp"
                     android:orientation="horizontal">
@@ -319,13 +319,21 @@
         </android.support.design.widget.AppBarLayout>
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/goods_Info"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swip_refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
-        </android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/goods_Info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
 
         <TextView
             android:id="@+id/cdl"
