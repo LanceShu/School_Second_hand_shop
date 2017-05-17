@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:id="@+id/find_bar"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/classification_layout_title_background"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="XXX保险"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="5dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:layout_height="match_parent"
+            android:id="@+id/discovery_ad_list"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/no_loginin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未登陆，无法查看~"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="@color/register_background"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/register_background">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="总保金："
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center|right"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/totalmoney"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="元"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

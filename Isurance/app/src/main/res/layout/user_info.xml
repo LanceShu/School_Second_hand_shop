@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/register_layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/register_background"
+
+        >
+
+        <ImageView
+            android:id="@+id/register_layout_back_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/back"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人信息"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="15dp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="用户名："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="性别："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="年龄："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right"/>
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="出生年月："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right" />
+
+            <TextView
+                android:id="@+id/birth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:maxLength="11"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="手机号："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="电子邮箱："
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center|right"/>
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text=""
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/modefy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="修改个人信息"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:backgroundTint="@color/register_background"/>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/isurance_web"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/register_background"
+        app:popupTheme="@style/ToolbarPopupTheme">
+
+        <ImageView
+            android:id="@+id/goodsBack"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="保险详情"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+</RelativeLayout>

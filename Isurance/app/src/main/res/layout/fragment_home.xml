@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:fitsSystemWindows="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:padding="3dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/endowment"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="交强险"
+                                android:layout_alignParentBottom="true" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/medical"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="第三方责任险"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/property"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="车辆损失险"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/life"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="不计免赔险"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear3"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image5"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/occupational"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="车上人员责任险"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/image6"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:src="@mipmap/unemployment" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="#494949"
+                                android:text="盗抢险"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/find_bar"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/classification_layout_title_background"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="XXX保险"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

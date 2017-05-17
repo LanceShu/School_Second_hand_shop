@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbars"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@drawable/classification_layout_title_background"
+        app:popupTheme="@style/ToolbarPopupTheme">
+
+        <ImageView
+            android:id="@+id/goodsBack"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="保险介绍"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/goodsImage"
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@mipmap/organization"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/goodsContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="123"
+                android:textSize="18sp"
+                android:textColor="#000"/>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:background="@color/register_background">
+
+
+            <TextView
+                android:id="@+id/goodsPrice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:text="查看保险详情"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/goodsCommunicate"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="加入购物车"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="20sp"-->
+                <!--android:gravity="center"-->
+                <!--android:background="#528caf"/>-->
+
+            <TextView
+                android:id="@+id/goodsCommunicate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="立即投保"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="#d15148"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/register_background">
+
+        <RelativeLayout
+            android:id="@+id/me_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.our_company.school_second_hand_shop.MyView.RoundImageView
+                android:id="@+id/me_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                app:borderRadius="90dp"
+                app:imageType="round"
+                android:src="@mipmap/user"/>
+
+            <TextView
+                android:id="@+id/islogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/me_image"
+                android:layout_centerInParent="true"
+                android:text="登录或注册"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="#fff">
+
+            <LinearLayout
+                android:id="@+id/user_info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/user_info"
+                    android:id="@+id/imageView" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="个人信息"
+                    android:textSize="20sp"
+                    android:textColor="@color/register_background"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/car_info"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/car_info"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="车辆管理"
+                    android:textSize="20sp"
+                    android:textColor="@color/register_background"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="#fff">
+
+            <LinearLayout
+                android:id="@+id/user_help"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/use_help" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="使用说明"
+                    android:textSize="20sp"
+                    android:textColor="@color/register_background"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/use_question"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/use_question"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="反馈问题"
+                    android:textSize="20sp"
+                    android:textColor="@color/register_background"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/me_loginout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="退出系统"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:backgroundTint="@color/register_background"/>
+
+
+</LinearLayout>

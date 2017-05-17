@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbars_buy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/register_background"
+        app:popupTheme="@style/ToolbarPopupTheme">
+
+        <ImageView
+            android:id="@+id/goodsBack"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="投保详情"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@color/register_background">
+        
+        <ImageView
+            android:id="@+id/promiss_image"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" 
+            android:layout_gravity="center"
+            android:src="@mipmap/endowment"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/promiss_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="computer"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:gravity="left|center"/>
+
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/car_list"
+            android:padding="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/isHasCar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="无车辆信息"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="@color/register_background"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#bcbcbc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="购车年份："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"/>
+
+            <TextView
+                android:id="@+id/car_year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:hint="请从上方选择车辆"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="购车价格："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"
+                android:id="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/car_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="车牌号："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"/>
+
+            <TextView
+                android:id="@+id/car_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="保额："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"
+                android:id="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/promiss_money"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="保期："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"
+                android:id="@+id/textView4" />
+
+            <EditText
+                android:id="@+id/promiss_year"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="保金："
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#282828"/>
+
+            <TextView
+                android:id="@+id/promiss_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="0.0"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buy_buy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="确认购买"
+        android:textColor="#1a1a1a"
+        android:textSize="25sp"
+        android:backgroundTint="@color/register_background"/>
+
+</LinearLayout>
